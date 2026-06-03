@@ -1,0 +1,409 @@
+/*estilo geral reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f2;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: #2c2c2c;
+}
+
+/* cabeçalho*/
+#cabecalho {
+    background-color: #fdfbfb;
+    border-bottom: 3px solid #1a5f6e;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    height: 250px;
+    width: auto;
+}
+
+/* títulos das seções  */
+.section-titulo {
+    color: #1a5f6e;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #1a5f6e;
+    padding-bottom: 6px;
+}
+
+/* carrossel*/
+#destaques {
+    background-color: #1a5f6e;
+    padding-bottom: 20px;
+    min-height: 400px;
+}
+
+#destaques h2{
+    background-color: #f4f4f2;
+}
+
+.carousel-img {
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+
+.carousel-item .d-flex{
+    min-height: 400px;
+}
+
+.carousel-caption {
+    background-color: rgba(26, 95, 110, 0.75);
+    border-radius: 8px;
+    padding: 10px 16px;
+}
+
+.carousel-caption h5 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.carousel-caption p {
+    font-size: 0.9rem;
+    color: #e0e0e0;
+}
+
+/*estilo dos cards */
+#todos-filmes {
+    background-color: #f4f4f2;
+    padding-bottom: 20px;
+}
+
+.card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    transition: transform 0.2s;
+    }
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body .btn {
+    margin-top: auto; /* botão sempre no fundo do box do  card*/
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+
+.card-img-top {
+    height: 350px; /*tamanho do poster no carrossel*/
+    width: auto;
+    object-fit: contain;
+    background-color: #1a5f6e;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a5f6e;
+    margin-bottom: 6px;
+}
+
+.card-text {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 2px;
+}
+
+.card .btn {
+    background-color: #1a5f6e;
+    color: #ffffff;
+    font-size: 1.0rem;
+    border: none;
+}
+
+.card .btn:hover {
+    background-color: #14474f;
+}
+
+/* minha seção:  */
+#info-aluna {
+    background-color: #1a5f6e;
+    color: #f4f4f2;
+}
+
+#info-aluna h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #b2d8d8;
+}
+
+#info-aluna p {
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: #e0e0e0;
+}
+
+#logolinkedin {
+    height: 30px;
+    width: auto;}
+
+
+/*posteres */
+.poster-lateral {
+    height: 280px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    opacity: 0.5;
+    filter: blur(2px);
+}
+
+.poster-central-wrapper {
+    position: relative;
+}
+
+.poster-central {  
+    display: flex;
+    height: 400px; /*tamanho do poster no carrossel*/
+    width: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    z-index: 20;
+}
+
+.poster-texto {
+    color: #ffffff;
+    max-width: 300px;
+}
+
+.poster-texto h3 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.poster-texto p {
+    font-size: 1.0rem;
+    line-height: 1.6;
+}
+
+.poster-legenda h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.poster-legenda p {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.poster-texto .btn {
+    background-color: rgb(242, 242, 122);
+    color: #14474f;
+    font-size: 1.0rem;
+    padding: 10px 24px;
+    border-radius: 8px;
+}
+
+.poster-texto .btn:hover {
+    background-color: #14474f;
+    color: #ffffff;
+}
+
+.slide-content  /* conteudo do carrossel */{
+    /* d-flex justify-content-center align-items-center gap-4 py-4 px-3 */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4;
+    img {
+        margin-right: 50px;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+}
+
+/*Responsividade: */
+@media (max-width: 768px) {
+    #logo {
+        height: 70px;
+    }
+
+    .poster-central {
+        height: 230px;
+        width: auto;
+        max-width: 100%;
+    }
+
+    .poster-texto {
+        text-align: left;
+        max-width: 100%;
+        padding: 0px;
+    }
+
+    .poster-texto h3 {
+        font-size: 1.4rem;
+    }
+
+    .poster-texto p {
+        text-align: left;
+        font-size: 0.9rem;
+    }
+
+    .poster-texto .btn{
+        font-size: 0.85rem;
+        padding: 6px 16px;
+    }
+
+    #info-aluna .col-12 {
+        margin-bottom: 20px;
+    }
+}
+
+/*============ css da detalhe.html===========*/
+
+body {
+ font-family: sans-serif;
+ font-size: 25px;
+ background: linear-gradient(800deg, #f5f5f2, #14474f); /* cor do fundo da tela */
+ color: #ffffff;
+}
+
+/* limitação da largura máxima e centralizar o conteúdo na tela */
+.interface-container {
+ width: 100%;
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 20px;
+}
+
+/* espaçamento interno (equivalente ao py-4 do bootstrap) */
+.secao-filme {
+ padding: 40px 0;
+}
+
+/* cabeçalho (substitui o d-flex justify-content-center do bootstrap) */
+#cabecalho {
+ padding: 16px 0;
+ border-bottom:0cap;
+}
+
+.cabecalho-conteudo {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+#logo {
+ max-height: 200px; /* tamanho da logo */
+ height: auto;
+ display: block;
+}
+
+/* seção 1: Grid de informações do filme */
+.grade-filme {
+ display: grid;
+ grid-template-columns: 1fr; /*celular com 1 coluna */
+ gap: 30px;
+ }
+
+#detalhe-texto hr { /*linhas de detalhes*/
+    border-color: #6f9199;
+    }
+
+/* Diminuir o tamanho dos textos na tela de detalhes */
+#detalhe-texto {
+    font-size: 16px; 
+    line-height: 1.5; 
+    padding: 15px;
+    }
+
+#detalhe-titulo p strong{
+    font-size: 18px;
+}
+
+#detalhe-titulo {
+    color: #1a5f6e;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #1a5f6e;
+    padding-bottom: 6px;}
+
+
+
+
+/* botão de voltar*/
+.btn-detalhe {
+    background-color: rgb(242, 242, 122);
+    color: #14474f;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    text-decoration: none;
+    display: inline-block;
+
+}
+
+.btn-detalhe:hover{
+    background-color: #14474f;
+    color: #ffffff;
+}
+
+/* seção 2: Grid da galeria de fotos */
+.galeria-fotos {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /*galeria responsiva automática */
+ gap: 16px;
+ margin-top: 16px;
+}
+
+.foto-detalhe{ /*tamanhos das imagens de cenas*/
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px 8px 0 0;
+}
+
+#detalhe-galeria .card-text{
+    color:#1a5f6e;
+}
+
+/*imagens do app.js responsivas */
+.grade-filme img,
+.galeria-fotos img {
+ width: 100%;
+ /*height: auto;*/
+ display: block;
+ border-radius: 8px;
+}
+
+/* título da seção */
+.section-titulo {
+ font-size: 1.8rem;
+ margin-bottom: 16px;
+}
+
+
+
+/* Media Query para desktop*/
+@media (min-width: 768px) {
+ .grade-filme {
+ /* em tela grande, coloca em 2 colunas: pôster na esquerda, texto na direita*/
+ grid-template-columns: 300px 1fr; 
+ }
+}

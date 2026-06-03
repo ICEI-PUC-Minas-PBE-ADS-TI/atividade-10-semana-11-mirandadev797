@@ -1,13 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todos os Itens</title>
-    <script src="script.js"></script>
+    <title>Cinema Livre</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
+
 <body>
-    
+
+    <!--======================================================
+    ATENÇÃO: PARA O TESTE, ABRIR A PÁGINA POR ESTE HTML (HOME)
+    =======================================================-->
+
+
+
+    <!-- cabeçãlho -->
+    <header id="cabecalho">
+        <div class="container-fluid px-4 py-3 d-flex justify-content-center align-items-center">
+            <img src="img/logo.jpeg" alt="Cinema Livre" id="logo">
+        </div>
+    </header>       
+
+    <main>
+
+        <!-- primeira sessão: o carrossel -->
+        <section id="destaques">
+            <h2 class="section-titulo px-4 pt-4">Itens em Destaque</h2>
+             <div id="carrossel-destaques" class="carousel slide px-4 pb-4" data-bs-ride="carousel" data-bs-interval="2000">
+                <div class="carousel-inner" id="carousel-inner-destaques">
+
+                    <!-- js vai preencher: -->
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carrossel-destaques" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carrossel-destaques" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+                <div class="carousel-indicators" id="carousel-indicators-destaques">
+                    <!-- preenchido pelo app.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- segunda sessão: todos filmes: -->
+        <section id="todos-filmes">
+            <h2 class="section-titulo px-4 pt-4">Todos os filmes</h2>
+            <div class="row g-3 px-4 pb-4" id="lista-filmes">
+                <!-- preenchido pelo app.js -->
+            </div>
+        </section>
+
+        <!-- minhas informações -->
+        <section id="info-aluna">
+            <div class="container-fluid px-4 py-4">
+                <div class="row">
+                    <div class="col-12 col-md-6" id="sobre-bloco">
+                        <h3>Sobre</h3>
+                        <p>O Cinema Livre é um movimento cultural dedicado a levar a experiência do cinema para todos, <br>
+com sessões gratuitas, em um ambiente público e inclusivo. </p>
+                    </div>
+                    <div class="col-12 col-md-6" id="autoria-bloco">
+                        <h3>Autoria</h3>
+                        <p><strong>Aluna:</strong> Marina Miranda Nunes</p>
+                        <p><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</p>
+                        <p><strong>Turma:</strong> 01/2026</p>
+                        <p class="mt-2"> <!--espaçamento do bootstrap (vai de 0 à 5)-->
+                            <a href="https://www.linkedin.com/in/marinamirandacontatopro" target="_blank" class="text-decoration-none">
+                                <button id="logolinkedin" style="background: none; border: none; padding: 0;">
+                                  <img src="img/linkedin.png" alt="LinkedIn" style="width: 40px; height: auto;">
+                                </button>
+                            </a> ← acesse aqui
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
 </body>
 </html>
+
+<!--https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css-->
